@@ -34,7 +34,8 @@ def downolad_data(product):
     if not offers:
         raise AllegroError('No result!!')
 
-    url = 'http://allegro.pl' + offers.find('a').get('href')
+    path = offers.find('a').get('href')
+    url = ''.join(['http://allegro.pl', path])
 
     price = offers.div.find('span', class_='buy-now dist')
     price = price.contents[2]
