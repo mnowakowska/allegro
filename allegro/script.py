@@ -11,11 +11,11 @@ parser.add_option("-k",
 
 
 def main():
-        try:
-            url, price = downolad_data(' '.join(args))
-        except AllegroError as e:
-            print e
-        except Exception as e:
-            print e
-        else:
-            return 'Price: %s, Url: %s' % (price, url)
+    try:
+        url, price = downolad_data(' '.join(args))
+    except AllegroError as e:
+        print e
+    except Exception as e:
+        print e
+    else:
+        return 'Price: %s, Url: %s' % (price, url)
